@@ -11,13 +11,13 @@ class ScrapeController extends Controller
 {
     public function index()
     {
-        exit('here');
+        return view('works.index');
     }
 
     public function show()
     {
         $member_infos = $this->scrape_page();
-        dd($infos);
+        return view('works.show', compact('member_infos'));
     }
 
     public function scrape_page()
