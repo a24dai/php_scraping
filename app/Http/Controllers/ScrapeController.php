@@ -28,7 +28,6 @@ class ScrapeController extends Controller
                 'name'    => $node->filter('.member-column__name')->text(),
                 'en_name' => $node->filter('.member-column__name--en')->text(),
                 'post'    => $node->filter('.member-column__post')->text(),
-                'intro'   => $node->filter('.member-column__bubble')->text(),
                 'img'     => $this->extract_url($node->filter('.member-column__image')->attr('style')),
             ];
         });
